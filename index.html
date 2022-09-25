@@ -45,34 +45,32 @@
 			
 		function load(dir) {
 		var request;
-		if (window.XMLHttpRequest) {request = new XMLHttpRequest();}
-		request.open('GET', dir);
+		/*if (window.XMLHttpRequest)*/ request = new XMLHttpRequest();
+		request.open('GET', dir, false);
 		request.send(null);
-		//alert(request.responseText);
 		return request.responseText;
 		}
 		
-		function convertion(file){
+		function conversion(file){
 			var pageMk= load("./markdown/"+file),
 				converter = new showdown.Converter(),
 				pageHTML= converter.makeHtml(pageMk);
-			alert("./markdown/"+file);
 			return pageHTML;
 		}
 		
-		function write(page){
+		function plif(page){
+			var pif=document.getElementById("page");
 			document.write(page);
 		}
-	
+
 		function page(file){
-			write(convertion(file));
-//			load(convertion(file))
+			plif(conversion(file));
 		}
 
 		
 		</script>
 		<div id="page">
-			<p>RT Compendium pour <a href="./markdown/Lang_Bash.md"> vous</a> servir!</p>
+			<p>RT Compendium pour <a href="markdown/Lang_Bash.md"> vous</a> servir!</p>
 		</div>
 
 
