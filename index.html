@@ -4,12 +4,14 @@
 	<head>
 	    <meta charset="utf-8">
 	    <title>R&amp;T Compendium</title>
-		
+		<script src="./js/showdown.js"></script>
+		<script src="./js/core.js"></script>
 	</head>
 	<body>
 		
 		<nav>
 			<ul>
+				
 				<li>Langages</li>
 				<ul>
 					<li onClick="page('Lang_C++.md')">C++</li>
@@ -35,45 +37,5 @@
 			</ul>
 		</nav>
 		
-		<script src="./js/showdown.js"></script>
-		
-		<script>
-			
-		
-			
-			
-			
-		function load(dir) {
-		var request;
-		/*if (window.XMLHttpRequest)*/ request = new XMLHttpRequest();
-		request.open('GET', dir, false);
-		request.send(null);
-		return request.responseText;
-		}
-		
-		function conversion(file){
-			var pageMk= load("./markdown/"+file),
-				converter = new showdown.Converter(),
-				pageHTML= converter.makeHtml(pageMk);
-			return pageHTML;
-		}
-		
-		function plif(page){
-			var pif=document.getElementById("page");
-			document.write(page);
-		}
-
-		function page(file){
-			plif(conversion(file));
-		}
-
-		
-		</script>
-		<div id="page">
-			<p>RT Compendium pour <a href="markdown/Lang_Bash.md"> vous</a> servir!</p>
-		</div>
-
-
-
 	</body>
 </pageHTML>
