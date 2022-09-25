@@ -1,6 +1,39 @@
-
-
 body{
 background-color: #464646;
 color: #ffffff;
+font-family: quicksand;
+font-size: 16px;
+}
+
+a{
+color: #5CAEFF
+}
+
+strong{
+color: #955656
+}
+
+nav{
+font-size: 24px;
+font-family: Monospace;
+}
+
+code{
+font-family: Monospace;
+background-color: #303030;
+}
+
+pre{
+padding: 10px;
+border: 1px solid black;
+border-radius: 5px;
+margin-bottom: 5px;
+font-family: Monospace;
+background-color: #303030;
+}
+
+.refrech{
+text-align: center;
+font-size: 24px;
+font-family: Monospace;
 }
