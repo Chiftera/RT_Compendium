@@ -18,7 +18,7 @@ function conversion(file){
 }
 
 function plif(page){
-	document.write('<div class="refrech"><p onClick="window.location.reload()">Accueil</p></div>'+page);
+	document.write(load("./accueil.html")+page);
 }
 
 function page(file){
