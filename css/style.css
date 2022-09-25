@@ -2,7 +2,12 @@ body{
 background-color: #464646;
 color: #ffffff;
 font-family: quicksand;
-font-size: 16px;
+font-size: 20px;
+
+margin-top: 0%;
+margin-bottom: 30%;
+margin-right: 15%;
+margin-left: 15%;
 }
 
 a{
@@ -32,10 +37,3 @@ font-family: Monospace;
 background-color: #303030;
 }
 
-.refrech{
-text-align: center;
-font-size: 24px;
-font-family: Monospace;
-color: #5CAEFF;
-
-}

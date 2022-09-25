@@ -1,7 +1,7 @@
 # Bash
 
 [Bash](https://fr.wikipedia.org/wiki/Bourne-Again_shell) est un interpréteur en ligne de commande de type script.  
-Vous pouvez retrouver un guide complet en ligne de ce dernier a cette [adresse](http://aral.iut-rodez.fr/fr/sanchis/enseignement/bash/index.html) ou en PDF [ici](http://aral.iut-rodez.fr/fr/sanchis/enseignement/IntroProgBash_2022-06-03.pdf) *([archive](./IntroProgBash_2022-06-03.pdf))*
+Vous pouvez retrouver un guide complet en ligne de ce dernier a cette [adresse](http://aral.iut-rodez.fr/fr/sanchis/enseignement/bash/index.html) ou en PDF [ici](http://aral.iut-rodez.fr/fr/sanchis/enseignement/IntroProgBash_2022-06-03.pdf) *([archive](./media/docs/IntroProgBash_2022-06-03.pdf))*
 
 ## Caracteres spéciaux
 
@@ -117,7 +117,7 @@ return
 `type` : Retourne de quel type de commande il s'agit  
 `history` : Historique des commandes  
 `alias` : Permet la creation d'alias (alias nom="<Commande>")  
-`env` : Affiche pleins de truc utile sur la session utilisateur
+`env` : Affiche pleins de truc utile sur la session utilisateur  
 `pwd` Affiche le chemin de travail actuel
 
 ## Variables par défauts

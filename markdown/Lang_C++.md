@@ -38,8 +38,8 @@ Les opérateurs d'incrémentation et de décrémentation ++ et -- s'appliquent c
 
 ```c++
 int i=2,j,k;
-j=++i;   /* À la fin de cette instruction, i et j valent 3. */
-k=j++;   /* À la fin de cette ligne, k vaut 3 et j vaut 4. */
+j=++i;   /* i et j valent 3. */
+k=j++;   /* k vaut 3 et j vaut 4. */
 ```
 
 > On prendra garde à n'utiliser les opérateurs d'incrémentation et de décrémentation postfixés que lorsque cela est réellement nécessaire. En effet, ces opérateurs doivent contruire un objet temporaire pour renvoyer la valeur de la variable avant incrémentation ou décrémentation. Si cet objet temporaire n'est pas utilisé, il est préférable d'utiliser les versions préfixées de ces opérateurs. 

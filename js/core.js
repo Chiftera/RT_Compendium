@@ -17,10 +17,12 @@ function conversion(file){
 	return pageHTML;
 }
 
-function plif(page){
-	document.write(load("./accueil.html")+page);
+function pouf(page){
+	var doc = document.getElementById("page");
+	doc.innerHTML = page;
+
 }
 
 function page(file){
-	plif(conversion(file));
+	pouf(conversion(file));
 }
