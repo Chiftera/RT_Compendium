@@ -6,11 +6,11 @@ font-size: 16px;
 }
 
 a{
-color: #5CAEFF
+color: #5CAEFF;
 }
 
 strong{
-color: #955656
+color: #955656;
 }
 
 nav{
@@ -36,4 +36,6 @@ background-color: #303030;
 text-align: center;
 font-size: 24px;
 font-family: Monospace;
+color: #5CAEFF;
+
 }
