@@ -4,7 +4,7 @@
 	<head>
 	    <meta charset="utf-8">
 	    <title>R&amp;T Compendium</title>
-		<link> </link>
+		
 	</head>
 	<body>
 		
@@ -12,26 +12,26 @@
 			<ul>
 				<li>Langages</li>
 				<ul>
-					<li onClick="load('Lang_C++.md')">C++</li>
-					<li onClick="load('Lang_JavaScript.md')">JavaScript</li>
-					<li onClick="load('Lang_HTML.md')">HTML</li>
-					<li onClick="load('Lang_CSS.md')">CSS</li>
-					<li onClick="load('Lang_Nim.md')">Nim</li>
-					<li onClick="load('Lang_Bash.md')">Bash</li>
+					<li onClick="page('Lang_C++.md')">C++</li>
+					<li onClick="page('Lang_JavaScript.md')">JavaScript</li>
+					<li onClick="page('Lang_HTML.md')">HTML</li>
+					<li onClick="page('Lang_CSS.md')">CSS</li>
+					<li onClick="page('Lang_Nim.md')">Nim</li>
+					<li onClick='page("Lang_Bash.md")'>Bash</li>
 				</ul>
 				<li>Système</li>
 				<ul>
 					<li>Linux</li>
 					<ul>
-						<li onClick="load('Sys_Linux_Fonctionnement.md')">Fonctionnement</li>
-						<li onClick="load('Sys_Linux_Noyau.md')">Noyau</li>
-						<li onClick="load('Sys_Linux_Composants.md')">Composants</li>
+						<li onClick="page('Sys_Linux_Fonctionnement.md')">Fonctionnement</li>
+						<li onClick="page('Sys_Linux_Noyau.md')">Noyau</li>
+						<li onClick="page('Sys_Linux_Composants.md')">Composants</li>
 					</ul>
-					<li onClick="load('Sys_PartEtFile.md')">Memoire et stockage</li>
+					<li onClick="page('Sys_PartEtFile.md')">Memoire et stockage</li>
 				</ul>
-				<li onClick="load('Maths.md')">Maths</li>
-				<li onClick="load('Electronique.md')">Electronique</li>
-				<li onClick="load('Reseaux.md')">Reseaux</li>
+				<li onClick="page('Maths.md')">Maths</li>
+				<li onClick="page('Electronique.md')">Electronique</li>
+				<li onClick="page('Reseaux.md')">Reseaux</li>
 			</ul>
 		</nav>
 		
@@ -39,19 +39,43 @@
 		
 		<script>
 			
-		function load(file){
-			var dir= "./markdown/"+ file,
-				converter = new showdown.Converter(),
-				html= converter.makeHtml(dir);
+		
+			
+			
+			
+		function load(dir) {
+		var request;
+		if (window.XMLHttpRequest) {request = new XMLHttpRequest();}
+		request.open('GET', dir);
+		request.send(null);
+		//alert(request.responseText);
+		return request.responseText;
 		}
 		
-		</script>
+		function convertion(file){
+			var pageMk= load("./markdown/"+file),
+				converter = new showdown.Converter(),
+				pageHTML= converter.makeHtml(pageMk);
+			alert("./markdown/"+file);
+			return pageHTML;
+		}
 		
+		function write(page){
+			document.write(page);
+		}
+	
+		function page(file){
+			write(convertion(file));
+//			load(convertion(file))
+		}
+
+		
+		</script>
 		<div id="page">
-			<p>RT Compendium pour vous servir!</p>
+			<p>RT Compendium pour <a href="./markdown/Lang_Bash.md"> vous</a> servir!</p>
 		</div>
 
 
 
 	</body>
-</html>
+</pageHTML>
