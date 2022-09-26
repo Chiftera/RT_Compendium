@@ -2,11 +2,11 @@
 <html lang="fr">
 
 	<head>
-	    <meta charset="utf-8">
-	    <title>R&amp;T Compendium</title>
-	    
-	    <link rel="stylesheet" href="./css/base.css" />
-	    <link rel="stylesheet" href="./css/menu.css" />
+		<meta charset="utf-8">
+		<title>R&amp;T Compendium</title>
+		<link rel="stylesheet" href="./css/menu.css" />
+		<link rel="stylesheet" href="./css/base.css" />
+		
 		<script src="./js/showdown.js"></script>
 		<script src="./js/core.js"></script>	
 		
@@ -14,38 +14,42 @@
 	
 	<body onload="page('Accueil.md')">
 		
-		<div class="menu">
+	<nav>
+		<ul class="menu">
+			  
+			<li onClick="page('Accueil.md')"> Accueil</li>
 			
-			<div class="nav_Lang">
-				<button class="nav"> Langages </button>
-				<div class="nav_Lang_bis">
-					<p onClick="page('Lang_C++.md')">C++</p>
-					<p onClick="page('Lang_JavaScript.md')">JavaScript</p>
-					<p onClick="page('Lang_HTML.md')">HTML</p>
-					<p onClick="page('Lang_CSS.md')">CSS</p>
-					<p onClick="page('Lang_Nim.md')">Nim</p>
-					<p onClick='page("Lang_Bash.md")'>Bash</p>
-				</div>
-			</div>
+			<li>
+				Langages
+				<ul class="menu_bis">
+					<li onClick="page('Lang_C++.md')">C++</li>
+					<li onClick="page('Lang_JavaScript.md')">JavaScirpt</li>
+					<li onClick="page('Lang_Nim.md')">Nim</li>
+					<li onClick="page('Lang_HTML.md')">HTML</li>
+					<li onClick="page('Lang_CSS.md')">CSS</li>
+					<li onClick="page('Lang_Bash.md')">Bash</li>
+				</ul>
+			</li>
 			
-			<div class="nav_Sys">
-				<button class="nav">Système</button>
-				<div class="nav_Sys_bis">
-					<p onClick="page('Sys_Linux_Composants.md')">Linux</p>
-					<p onClick="page('Sys_PartEtFile.md')">Memoire et stockage</p>
-					<p onClick="page('Sys_Reseaux.md')">Reseaux</p>
-				</div>
-			</div>
+			<li>
+				Systeme
+				<ul class="menu_bis">
+					<li onClick="page('Sys_Linux.md')">Linux</li>
+					<li onClick="page('Sys_PartEtFile.md')">Memoire et Stockage</li>
+					<li onClick="page('Sys_Reseaux.md')">Réseaux</li>
+				</ul>
+			</li>
 			
-			<div class="nav_Others">
-				<button class="nav">Autres</button>
-				<div class="nav_Others_bis">
-					<p onClick="page('Maths.md')">Maths</p>
-					<p onClick="page('Electronique.md')">Electronique</p>
-				</div>
-			</div>
-
-		</div>
+			<li>
+				Autres
+				<ul class="menu_bis">
+					<li onClick="page('Maths.md')">Maths</li>
+					<li onClick="page('Electronique.md')">Electronique</li>
+				</ul>
+			</li>
+			
+		</ul>
+	</nav>
 
 		<div id="page"></div>
 	
