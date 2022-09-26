@@ -1,2 +1,2 @@
 # R&T compendium
-Les fichiers Markdown servent a contruire le contenue htlm du site. Pour contribuer au site, vous pouvez donc editer ces fichiers via n'importe quel editeur de texte puis les uploader dans le fichier Markdown
+Les fichiers Markdown servent à contruire le contenue HTML du site. Pour contribuer au site, vous devez donc éditer ces fichiers via n'importe quel éditeur de texte puis les uploader dans le dossier Markdown
