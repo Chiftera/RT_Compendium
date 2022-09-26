@@ -4,43 +4,50 @@
 	<head>
 	    <meta charset="utf-8">
 	    <title>R&amp;T Compendium</title>
-	    <link rel="stylesheet" href="./css/style.css" />
+	    
+	    <link rel="stylesheet" href="./css/base.css" />
+	    <link rel="stylesheet" href="./css/menu.css" />
 		<script src="./js/showdown.js"></script>
 		<script src="./js/core.js"></script>	
+		
 	</head>
+	
 	<body onload="page('Accueil.md')">
 		
-		<nav>
-			<ul>
-				
-				<li>Langages</li>
-				<ul>
-					<li onClick="page('Lang_C++.md')">C++</li>
-					<li onClick="page('Lang_JavaScript.md')">JavaScript</li>
-					<li onClick="page('Lang_HTML.md')">HTML</li>
-					<li onClick="page('Lang_CSS.md')">CSS</li>
-					<li onClick="page('Lang_Nim.md')">Nim</li>
-					<li onClick='page("Lang_Bash.md")'>Bash</li>
-				</ul>
-				<li>Système</li>
-				<ul>
-					<li>Linux</li>
-					<ul>
-						<li onClick="page('Sys_Linux_Fonctionnement.md')">Fonctionnement</li>
-						<li onClick="page('Sys_Linux_Noyau.md')">Noyau</li>
-						<li onClick="page('Sys_Linux_Composants.md')">Composants</li>
-					</ul>
-					<li onClick="page('Sys_PartEtFile.md')">Memoire et stockage</li>
-				</ul>
-				<li onClick="page('Maths.md')">Maths</li>
-				<li onClick="page('Electronique.md')">Electronique</li>
-				<li onClick="page('Reseaux.md')">Reseaux</li>
-			</ul>
-		</nav>
-		
-		<div id="page" >
+		<div class="menu">
+			
+			<div class="nav_Lang">
+				<button class="nav"> Langages </button>
+				<div class="nav_Lang_bis">
+					<p onClick="page('Lang_C++.md')">C++</p>
+					<p onClick="page('Lang_JavaScript.md')">JavaScript</p>
+					<p onClick="page('Lang_HTML.md')">HTML</p>
+					<p onClick="page('Lang_CSS.md')">CSS</p>
+					<p onClick="page('Lang_Nim.md')">Nim</p>
+					<p onClick='page("Lang_Bash.md")'>Bash</p>
+				</div>
+			</div>
+			
+			<div class="nav_Sys">
+				<button class="nav">Système</button>
+				<div class="nav_Sys_bis">
+					<p onClick="page('Sys_Linux_Composants.md')">Linux</p>
+					<p onClick="page('Sys_PartEtFile.md')">Memoire et stockage</p>
+					<p onClick="page('Sys_Reseaux.md')">Reseaux</p>
+				</div>
+			</div>
+			
+			<div class="nav_Others">
+				<button class="nav">Autres</button>
+				<div class="nav_Others_bis">
+					<p onClick="page('Maths.md')">Maths</p>
+					<p onClick="page('Electronique.md')">Electronique</p>
+				</div>
+			</div>
+
 		</div>
-		
-		
+
+		<div id="page"></div>
+	
 	</body>
 </html>

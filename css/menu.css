@@ -1,0 +1,36 @@
+.menu{
+font-size: 24px;
+font-family: Monospace;
+position: relative;
+}
+.nav:hover{
+color: #fff;
+background-color: #5CAEFF;
+}
+.nav{
+display: inline-block;
+}
+
+.nav_Lang_bis{
+display: none;
+}
+
+.nav_Lang:hover .nav_Lang_bis{
+display: block;
+}
+
+
+.nav_Sys_bis{
+display: none;
+}
+.nav_Sys:hover .nav_Sys_bis{
+display: block;
+}
+
+
+.nav_Others_bis{
+display: none;
+}
+.nav_Others:hover .nav_Others_bis{
+display: block;
+}
