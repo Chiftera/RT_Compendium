@@ -3,9 +3,10 @@
 Prise de note des differentes commandes disponible avec. La liste est non exhaustif mais permet de survire. Un [manuel complet](https://git-scm.com/book/fr/v2) est disponible en francais sur le site de [Git](https://git-scm.com/)  ainsi qu'une module en ligne de [Pierre Giraud](https://www.pierre-giraud.com/git-github-apprendre-cours/)
 
 ## Base
-Etat des fichiers et de la zone de travail:  
-!["Etat des fichiers Git](./media/etat-fichier-git.jpg "Etat des fichiers Git")
-!["Etat du repository Git](./media/zone-travail-git.jpg "Etat de la zone de travail Git")
+Etat des fichiers:  
+!["Etat des fichiers Git](./media/images/etat-fichier-git.png "Etat des fichiers Git")  
+Etat de la zone de travail:  
+!["Etat du repository Git](./media/images/zone-travail-git.png "Etat de la zone de travail Git")  
 Le contenu de la zone d’index est ce qui sera proposé lors du prochain commit.  
 
 ## Commande
