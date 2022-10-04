@@ -1,7 +1,3 @@
-function menu(){
-	return load("indexS.html");
-}
-
 function load(dir) {
 	var request;
 	if (window.XMLHttpRequest) request = new XMLHttpRequest();
@@ -11,7 +7,7 @@ function load(dir) {
 }
 
 function conversion(file){
-	var pageMk= load("./markdown/"+file),
+	var pageMk= load("./markdown/"+file+".md"),
 		converter = new showdown.Converter(),
 		pageHTML= converter.makeHtml(pageMk);
 	return pageHTML;
@@ -23,6 +19,6 @@ function pouf(page){
 
 }
 
-function page(file){
+function pageWrite(file){
 	pouf(conversion(file));
 }

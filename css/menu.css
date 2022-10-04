@@ -1,58 +1,43 @@
-nav ul {
-margin: 0;
-padding: 0;
-list-style-type: none;
-box-sizing: border-box;
+/* CSS Menu*/
+#menu_blason{
+	display: flex;
 }
 
-nav {
-text-align: center;
+#menu_blason_nom_RT{
+	font: 80px NovaMono;
 }
 
-.menu {
-display: inline-block;
-font-family: monospace;
-font-size: 24px;
+#menu_blason_nom_Compendium{
+	font: 24px NovaMono;
 }
 
-.menu > li {
-float: left;
-color: white;
-width: 140px;
-height: 40px;
-line-height: 40px;
-background: #303030;
-cursor: pointer;
-font-size: 18px;
+#menu_blason_logo{
+	width:100px;
+	height:100px;
+	padding: 30px;
 }
 
-.menu_bis {
-transform: scale(0);
-transform-origin: top center;
+#menu_nav {
+	font: 20px Hermit;
+	background-color: #383849;
+
+	border: 1px solid white;
+	border-radius: 8px;
+	padding: .5em;
+
+	cursor: pointer;
 }
 
-.menu_bis li {
-font-size: 18px;
-background: #303030;
-padding: 8px 0;
-color: white;
-border-bottom: black;
-transform: scale(1);
-transform-origin: top center;
+#menu_nav ul{
+	list-style: none;
 }
 
-.menu_bis li:last-child {
-border-bottom: 0;
+#menu_nav ul ul{
+	border-left: 2px solid white;
 }
 
-.menu_bis li:hover {
-background: #101010;
-}
-.menu li:hover .menu_bis li {
-transform: scale(1);
-}
-
-.menu li:hover .menu_bis {
-transform: scale(1);
-}
-
+/*
+summary {}
+details[open] {}
+details[open] summary {}
+*/

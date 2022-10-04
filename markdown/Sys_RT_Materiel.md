@@ -1,37 +1,5 @@
-# Reseaux
-
-## Intro
-
-Un reseau est composé: d'hôtes, périphériques partagés, périphériques réseau, supports réseau
-
-## Modèle OSI et TCP/IP
-Ces 2 modèles correspondent à une norme de communication permettant de separer chaque protocole entre 
-eux pour les rendre plus interoperables. Le modele OSI distingue 7 partie là ou TCP/IP que 4.
-Le modele le plus respecté est par ailleur ce dernier, OSI étant très strict.
-![Shema modele OSI](./media/images/modele_ISO_TCPIP.png "Modèle OSI TCP/IP")
-## Types of Area Networks (EN)
-
-Common types of area networks are:
-
-- **LAN**: Local Area Network
-- **WAN**: Wide Area Network
-- **WLAN**: Wireless Local Area Network
-- **MAN**: Metropolitan Area Network
-- **SAN**: Storage Area Network, System Area Network, Server Area Network, or sometimes Small Area Network
-- **CAN**: Campus Area Network, Controller Area Network, or sometimes Cluster Area Network
-- **PAN**: Personal Area Network
-
-
-## Organisation d’une communication
-
-- **Emetteur**: Dispositif codant le message pour l’émettre sur le canal.
-- **Récepteur**: Dispositif qui reçoit et décode le message.
-- **Canal de communication**: Support de transmission que le message empruntera pour se rendre de la source à la destination.
-
-## Materiels
-
-### Hotes 
-
+# Materiels  
+## Hotes  
 Les hôtes: Les ordinateurs qui envoient et reçoivent des messages sur le réseau.
 On distingue 2 types d'hotes:
 
@@ -43,12 +11,12 @@ service nécessite un logiciel serveur distinct.
 Ordinateurs équipés d'un logiciel qui permet de demander des informations
 auprès du serveur et de les afficher.
 
-### Supports reseaux
+## Supports reseaux
 
 **Les supports réseau**: Les supports réseau interconnectent les hôtes 
 et les périphériques réseaux. Ex : les câbles cuivre, les fibres optiques et les ondes radio.
 
-#### Fibre optique
+### Fibre optique
 La fibre optique est un support qui transmet les données via la lumiere. Elle est insensible au 
 perturbation éléctromagnétique exterieur et permet un très grand débit sur de long distance 
 au prix d'un cout financier plus élevé et d'une resistance moindre.  
@@ -59,14 +27,14 @@ Un cable de fibre optique est typiquement composé de plusieurs couche:
 - Une enveloppe pour reflechir la lumiere dans le coeur  
 - Un coeur qui conduit la lumiere  
 
-#### Cable Coaxial
-### Les périphériques partagés
+### Cable Coaxial
+## Les périphériques partagés
 
 **Les périphériques partagés**: Ils ne sont pas directement connectés au réseau, mais aux hôtes. L'hôte assure le partage des périphériques sur le réseau.
 
-### Les périphériques réseaux
+## Les périphériques réseaux
 
-#### Le concentrateur ou Hub
+### Le concentrateur ou Hub
 
 Ce dernier est comparable a une "*multiprise reseau*". Un hub:  
 
@@ -89,7 +57,7 @@ Une collision se deroule selon le shema suivant:
 5. Le message endommagé est répété sur tout les ports  
 
 
-#### Commutateurs ou Switch
+### Commutateurs ou Switch
 
 Un **switch** est la **version amelioré du hub**. Au lieu de repeter un message a tout ses ports, ce dernier tient une **table d'adresses MAC** qui lui sert a rediriger les paquets vers le bon port. Il permet ainsi une economie de bande passante et la conception de reseaux locaux plus grands, au detriment d'une complexité accrue.  
 Un switch:  
@@ -109,7 +77,7 @@ peut abandonner un paquets dans le cas où:
 - Il est corrompu  
 - Il n'y a qu'un port de connecté (Hub ou machine)  
 
-#### Associer concentrateurs et commutateurs  
+### Associer concentrateurs et commutateurs  
 
 Lorsqu’un concentrateur est connecté à un port du commutateur:
 
@@ -119,7 +87,7 @@ Lorsqu’un concentrateur est connecté à un port du commutateur:
 - Chaque port du commutateur crée un domaine de collision distinct.  
 
 
-#### Routeurs
+### Routeurs
 
 Les routeurs sont chargés de trouver le meilleur chemin pour transmettre un message au destinataire 
 (en utilisant les informations d'adresses du destinataire final et de l'expéditeur d'origine). Le 
@@ -145,45 +113,7 @@ Il existe 2 type de topologie:
 	- **Peer to peer**: Le logiciel client et le logiciel serveur sont généralement exécutés sur des ordinateurs distincts, mais un seul ordinateur peut tenir simultanément ces deux rôles. Ce type de réseau est appelé réseau peer to peer. Le plus simple est constitué de deux ordinateurs interconnectés à l'aide d'une connexion câblée ou sans fil.
 	- **Accès multiple**: Chaque hôte est connecté à tout les autres. Des protocoles sont nécessaires pour contrôler l’accès au support.
 	- **En anneau**: Chaque hôte n’est connecté qu’à deux autres hôtes . Les données circulent dans un seul sens.
-## Protocoles 
-### Adresse MAC
-L'adresse MAC correspond a un identifiant unique rataché à un materiel. Contrairement a l'IP, il ne peut être modifier. L'adresse MAC de broadcast est FF:FF:...:FF.  
-![Trame MAC](./media/images/MAC.png)  
-- **Organizational Unit Identifier**: L’IEEE vend aux industriels qui en font la demande un OUI (Organizational Unit Identifier) unique. Il est codé sur les 24 premiers bits de l'adresse MAC.  
-- **Bit I/G**: Il indique que l’adresse est universelle (valeur 0), c’est à dire attribuée par le constructeur à sa sortie d’usine, ou locale (valeur 1) c’est à dire attribuée par l’ingénieur réseau du site.  
-- **Bit U/L**: Il indique une adresse individuelle (valeur 0) c’est à dire ne référençant qu’un seul équipement sur le réseau, ou une adresse de groupe (valeur 1) c’est à dire référençant plusieurs équipements sur le réseau.  
-
-### Adresse IP  
-L'adresse IP correspond a un identifiant reseaux codé sur 4 octets pour IPv4 et 6 octets pour IPv6 et est modifiable aux grés des configurations reseaux. 
-Une adresse IP doit avoir un masque reseau pour identifer le reseau auquelle il appartient. Ainsi, un masque egal à `255:255:255:000` avec un ip de 
-`172.021.206.093` sera sur le reseau `172.021.206.000` (On utilise un `AND` entre les bits de masque et l'adresse hote). L'adresse broadcast est par ailleur 
-`172.021.206.255`. Le protocole IP n'assure pas que le message arrive à destination. Il sert seulement à indiquer l'expediteur et le destinataire.  
-### Protocole Ethernet  
-Le protocole Ethernet sert a envoyer des paquets la machine prochaine auquelle on est connnecté. Si A veux 
-envoyer un paquet a B mais que 3 routeur les separts, alors A envoit un paquet avec l'IP de B dans la trame IP mais 
-dans la trame Ethernet, c'est **l'adresse MAC du routeur de son reseau** qui y sera inscrit. Ensuite, le routeur 1 
-enverra le paquet a 2 en changeant la trame Ethernet selon le même shema, en y mettant l'adresse MAC du prochaine destinaire 
-directe (le routeur 2 en l'occurence). Dans une communication purement local, A aurait mis l'adresse MAC de B par contre.    
-Une trame Ethernet se constitue de la sorte:  
-![Trame Ethernet](./media/images/Ethernet_TypeII.png)  
-### Protocole ARP  
-Le protocole ARP est utilisé dans le cas où l'on veut envoyer un paquet a un destinataire local mais qu'on n'a que son adresse IP. 
-Dans ce cas, la machine envoyer un requete ARP en MAC Broadcast (FF) contenant son adresse MAC, IP et IP source. Si une machine repond, 
-elle envoit une reponse ARP avec ses infos. Et là tout le monde communique c'est parfait.  
-
-## Synchronisation et diffusion des messages
-Dans un topologie d'accès multiple, des protocoles sont nécessaires pour contrôler l’accès au support.  
-
-Si on laisse chaques hôtes émettre sans attendre son tour, mais il peut y avoir des collisions et quand 
-cela arrive, un message d'arret est alors transmit et les communication sont coupées pour certains temps 
-aleatoire. Le protocole Ethernet et basé sur ce systeme de conflit. En rotation chaque hôte doit attendre 
-son tour pour émettre, il n’y a donc pas de collisions. Le protocole Token Ring est basé là dessus mais a 
-donc le desavantage de consommer plus de bande passante par le transfere de jeton  
-
-Il existe par ailleurs 3 type de diffusion de messages:  
-- Unicast : Un hôte transmet des informations à un seul hôte (monodiffusion)  
-- Multicast : Un hôte transmet des informations à groupe d’hôtes (multidiffusion)  
-- Broadcast : Un hôte transmet des informations à tout les hôtes de son réseau (diffusion)  
+  
 
 
 

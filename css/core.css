@@ -1,0 +1,25 @@
+@font-face {
+font-family: "Quicksand";
+src: url('../fonts/Quicksand-Medium.ttf');
+} 
+@font-face {
+font-family: "NovaMono";
+src: url('../fonts/NovaMono-Regular.ttf');
+} 
+
+@font-face{
+font-family: "Hermit";
+src: url('../fonts/Hermit-Regular.otf');
+} 
+
+
+body{
+
+background-color: #404E61;
+
+color: #ffffff;
+}
+
+
+
+

@@ -1,0 +1,31 @@
+#page{
+font-family: Quicksand;
+font-size: 20px;
+
+margin-top: 0%;
+margin-bottom: 30%;
+margin-right: 15%;
+margin-left: 15%;
+}
+
+#page a{
+color: #5CAEFF;
+}
+
+#page strong{
+color: #955656;
+}
+
+#page code{
+font-family: Hermit;
+background-color: #303030;
+font-size: 18px;
+}
+
+#page pre{
+padding: 10px;
+border: 1px solid black;
+border-radius: 5px;
+margin-bottom: 5px;
+background-color: #303030;
+}

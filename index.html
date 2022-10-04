@@ -4,55 +4,97 @@
 	<head>
 		<meta charset="utf-8">
 		<title>R&amp;T Compendium</title>
-		<link rel="stylesheet" href="./css/menu.css" />
-		<link rel="stylesheet" href="./css/base.css" />
 		
+		<link rel="stylesheet" href="./css/core.css" />
+		<link rel="stylesheet" href="./css/menu.css" />
+		<link rel="stylesheet" href="./css/page.css" />
+		
+		<script src="./js/core.js"></script>
 		<script src="./js/showdown.js"></script>
-		<script src="./js/core.js"></script>	
 		
 	</head>
 	
-	<body onload="page('Accueil.md')">
-		
-	<nav>
-		<ul class="menu">
-			  
-			<li onClick="page('Accueil.md')"> Accueil</li>
-			
-			<li>
-				Langages
-				<ul class="menu_bis">
-					<li onClick="page('Lang_C++.md')">C++</li>
-					<li onClick="page('Lang_JavaScript.md')">JavaScirpt</li>
-					<li onClick="page('Lang_Nim.md')">Nim</li>
-					<li onClick="page('Lang_HTML.md')">HTML</li>
-					<li onClick="page('Lang_CSS.md')">CSS</li>
-					<li onClick="page('Lang_Bash.md')">Bash</li>
-				</ul>
-			</li>
-			
-			<li>
-				Systeme
-				<ul class="menu_bis">
-					<li onClick="page('Sys_Linux.md')">Linux</li>
-					<li onClick="page('Sys_PartEtFile.md')">Memoire et Stockage</li>
-					<li onClick="page('Sys_Reseaux.md')">Réseaux</li>
-				</ul>
-			</li>
-			
-			<li>
-				Autres
-				<ul class="menu_bis">
-					<li onClick="page('Maths.md')">Maths</li>
-					<li onClick="page('Electronique.md')">Electronique</li>
-					<li onClick="page('Git.md')"> Git </li>
-				</ul>
-			</li>
-			
-		</ul>
-	</nav>
-
-		<div id="page"></div>
+<body onload="pageWrite('Accueil')">
 	
-	</body>
+	<div class="box">
+	<div id="menu">
+		
+		<div id="menu_blason">
+			<img id="menu_blason_logo" src="./media/images/Logo_RT.png"/>
+			<p id="menu_blason_nom"><span id="menu_blason_nom_RT">R&amp;T</span> <br> <span id="menu_blason_nom_Compendium">Compendium</span></p>
+		</div>
+
+		<nav id="menu_nav">
+			<ul>
+				<li id="paf" onClick="pageWrite('Accueil')">Accueil</li>
+				<li>
+					<details> <summary>Langages</summary>
+						<ul>
+							
+							
+							<li>
+								<details> <summary>C++</summary>
+									<ul>
+										<li onClick="pageWrite('Lang_C++_IntroEtVariable')">Variables</li>
+										<li onClick="pageWrite('Lang_C++_Fonctions')">Fonctions</li>
+										<li onClick="pageWrite('Lang_C++_ConditionsEtBoucles')">Conditions et Boucles</li>
+										<li onClick="pageWrite('Lang_C++_Divers')">Divers</li>
+									</ul>
+								</details>
+							</li>
+
+							<li onClick="pageWrite('Lang_Nim')">Nim</li>
+							<li onClick="pageWrite('Lang_Bash')">Bash</li>
+						</ul>
+					</details>
+				</li>
+				<li>
+					<details> <summary>Système</summary>
+						<ul>
+							<li onClick="pageWrite('Sys_Linux')">GNU/ Linux</li>
+							<li onClick="pageWrite('Sys_PartEtFile')">Mémoire et Stockage</li>
+							<li>
+							<details> <summary>Réseaux et Télécommunications</summary>
+									<ul>
+										<li onClick="pageWrite('Sys_RT_Intro')">Introduction</li>
+										<li onClick="pageWrite('Sys_RT_Materiel')">Materiels et composants</li>
+										<li onClick="pageWrite('Sys_RT_Protocoles')">Protocoles</li>
+									</ul>
+							</details>
+							</li>
+						</ul>
+						
+					</details>
+				</li>
+				<li>
+					<details> <summary>Autres</summary>
+						<ul>
+							<li onClick="pageWrite('Maths')">Maths</li>
+							<li onClick="pageWrite('Electronique')">Electronique</li>
+						</ul>
+					</details>
+				</li>
+				<li>
+					<details> <summary>Logiciels</summary>
+						<ul>
+							<li onClick="pageWrite('Soft_Git')">Git</li>
+						</ul>
+					</details>
+				</li>
+
+			</ul>
+			
+		</nav>
+	
+	</div>
+	</div>
+	<div class="box">
+		<div id="page"></div>
+	</div>
+	
+	
+	
+	
+</body>
+
 </html>
