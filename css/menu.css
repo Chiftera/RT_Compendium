@@ -4,11 +4,15 @@
 }
 
 #menu_blason_nom_RT{
-	font: 80px NovaMono;
+	font: 80px Quicksand;
+}
+
+#menu_blason_nom_esp{
+	font: 60px Quicksand;
 }
 
 #menu_blason_nom_Compendium{
-	font: 24px NovaMono;
+	font: 25px NovaMono;
 }
 
 #menu_blason_logo{
@@ -19,7 +23,7 @@
 
 #menu_nav {
 	font: 20px Hermit;
-	background-color: #383849;
+	background-color: #303030;
 
 	border: 1px solid white;
 	border-radius: 8px;
@@ -34,6 +38,7 @@
 
 #menu_nav ul ul{
 	border-left: 2px solid white;
+	border-color: #bd33a4;
 }
 
 /*

@@ -15,8 +15,8 @@ src: url('../fonts/Hermit-Regular.otf');
 
 body{
 
-background-color: #404E61;
-
+#background-color: #404E61;
+background-color: #171717;
 color: #ffffff;
 }
 

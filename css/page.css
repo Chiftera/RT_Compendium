@@ -9,11 +9,15 @@ margin-left: 15%;
 }
 
 #page a{
-color: #5CAEFF;
+color: #ffbf00;
 }
 
 #page strong{
-color: #955656;
+color: #e32636;
+}
+
+#page em{
+color: #ffbf00;
 }
 
 #page code{
@@ -28,4 +32,18 @@ border: 1px solid black;
 border-radius: 5px;
 margin-bottom: 5px;
 background-color: #303030;
+}
+
+li::marker {
+color: #ffbf00;
+}
+
+#page h1{
+color:  #bd33a4;
+}
+#page h2{
+color:  #ca5cb6;
+}
+#page h3{
+color:  #EDB3FF;
 }
